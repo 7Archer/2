@@ -20,13 +20,14 @@ def say():
     print('详细内容:' + dict1['data']['share_content']) #详细内容
     print('')
     print('----------'+'"'+ dict1['data']['name'] +'"'+'的价格波动'+ '----------')
+    # 通过精确实时记录价格
     try:
         while (True):
             nowtime = strftime('%Y' + '-' + '%m' + '-' + '%d' + ' %H:%M:%S,价格为' + str(int(dict1['data']['price'])/100))
             print(nowtime)
-            sleep(3)
+            sleep(4)
 
     except:
         print("运行完成")
-if __name__ == '__main__':
-    say()
+    if __name__ == '__main__':
+        say()
