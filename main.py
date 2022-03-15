@@ -23,6 +23,7 @@ def say():
     print('----------'+'"'+ dict1['data']['name'] +'"'+'的价格波动'+ '----------')
     # 通过精确实时记录价格
     try:
+        # 每4秒记录一次抓取商品的信息
         while (True):
             nowtime = strftime('%Y' + '-' + '%m' + '-' + '%d' + ' %H:%M:%S,价格为' + str(int(dict1['data']['price'])/100))
             print(nowtime)
