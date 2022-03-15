@@ -5,13 +5,14 @@ import requests as requests
 
 
 def say():
-    # 抓取包的网址头部
+    # 用户代理，使得服务器能够识别客户使用的操作系统及版本、CPU 类型、浏览器及版本、浏览器渲染引擎、浏览器语言、浏览器插件等。
     head={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'
     }
-    #抓取包的网址
+    # 抓取包的网址
     url='https://j1.pupuapi.com/client/product/storeproduct/detail/deef1dd8-65ee-46bc-9e18-8cf1478a67e9/714c63f8-075d-4d20-b69c-246ac48d9da1'
     res = requests.get(url, headers=head)
+    # 获取所需信息
     dict1 = json.loads(res.text)
     print('----------'+'商品:'+dict1['data']['name']+'----------') #商品名
     print('规格:' + dict1['data']['spec']) #规格
