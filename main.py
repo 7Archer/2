@@ -9,6 +9,7 @@ def say():
     head={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'
     }
+
     url='https://j1.pupuapi.com/client/product/storeproduct/detail/deef1dd8-65ee-46bc-9e18-8cf1478a67e9/714c63f8-075d-4d20-b69c-246ac48d9da1'
     res = requests.get(url, headers=head)
     dict1 = json.loads(res.text)
